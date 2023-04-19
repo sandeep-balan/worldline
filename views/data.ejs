@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0 20px;
+        }
+        table,th,td{
+            border: 2px solid #123;
+            border-collapse: collapse;
+            padding:5px;
+        }
+        button{
+            margin-top: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <h1>Employee Details</h1>
+        
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email Address</th>
+                <th>Phone Number</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Qualification</th>
+                <th>Joining Date</th>
+                <th>Years of experience</th>
+            </tr>
+            <% datum.forEach((d)=>{ %>
+            <tr>
+                    <td> <%= d.name %></td>
+                    <td> <%= d.email %></td>
+                    <td> <%= d.phno %></td>
+                    <td> <%= d.age %></td>
+                    <td> <%= d.gender %></td>
+                    <td> <%= d.qualification %></td>
+                    <td> <%= d.joindate %></td>
+                    <td> <%= d.experience %></td>
+            </tr>
+            <% }); %>
+        </table>
+        <a href="http://localhost:3000"><button class="button">Back</button></a>
+    </div>
+</body>
+</html>
